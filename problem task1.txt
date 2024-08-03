@@ -1,0 +1,91 @@
+ 1.  Given the sequence: 1, 4, 9, 16, 25, what is the next number in the sequence?
+ans. Here 1^2 =1,2^2=4,3^2=9,4^2=16,5^2=25
+    Therefor the next sequence will be 6^2=36
+
+ 2. The clock shows the time as 3:30. What is the angle between the hour hand and the minute hand?
+ans. At 3:00 the angle will be 90 degree.
+     Therefore, the hour hand at 3:30 will be at 90+15=105,
+      The difference between the positions of the hour and minute hands is 180-105=75 degree
+
+3. Find the missing term in the series: 2, 6, 12, 20, __, 42.
+ans. the difference between the sequence is 6-2=4, 12-6=6, 20-12=8, 
+     the difference easing by 2 each time so the missing sequence will be 20+10=30
+
+4. Given the sequence: 1, 4, 9, 16, 25, what is the next number in the sequence?
+ans. 36
+
+5. If the day after tomorrow is a Wednesday, what day was it three days before the day before yesterday?
+ans. Wednesday
+
+6. Write a function that takes an input number and print all the even and odd numbers separately from zero to that input number
+ans. #include <stdio.h>
+     void printevenodd(int num){
+      printf("even number from 0 to %d:\n",num);
+     for(int i=0,i<=num,i++){
+     if(i%2==0){
+     printf("%d",i);
+   }
+}
+   printf("\n");
+    printf("odd number from 0 to %d:\n",num);
+    for(int i=0,i<=num,i++){
+   if(i%2!=0){
+   printf("%d",i);
+  }
+}
+printf("\n");
+}
+  int main() {
+  int num;
+ printf("enter a number");
+  scanf("%d",&num);
+printevenodd(num)
+return 0;
+}
+
+7.  Write a code to check that the word contains any vowels then return true of false
+ans. #include <stdio.h>
+#include <stdbool.h>
+
+bool containsVowel( char *word) {
+    while (*word) {
+        switch (*word) {
+            case 'a': case 'e': case 'i': case 'o': case 'u':
+            case 'A': case 'E': case 'I': case 'O': case 'U':
+                return true;    
+     }
+        word++;
+    }
+    return false; 
+}
+
+int main() {
+    char word[100];
+
+    printf("Enter a word: ");
+    scanf("%99s", word); // Use %99s to prevent buffer overflow
+
+    if (containsVowel(word)) {
+        printf("The word contains at least one vowel.\n");
+    } else {
+        printf("The word does not contain any vowels.\n");
+    }
+
+    return 0;
+}
+
+8. Write a function that returns factorial of the given number
+ans.#include <stdio.h>
+
+int main() {
+    int n,count,fact=1;
+    printf("enter the number of factorial:");
+    scanf("%d",&n);
+    for(count=1;count<=n;count++){
+        fact=fact*count;
+    }
+    printf("factorial is:%d\n",fact);
+    return 0;
+}
+
+
